@@ -610,15 +610,12 @@ background-clip: text; /* 🔥 أضف هيدا */
   gap: 40px;
   padding: 50px;
 }
+/*جهة اليسار*/
 .left-side {
   width: 60%;
   min-height: auto;
 }
 
-/*جهة اليسار*/
-.left-side {
-  width: 60%;
-}
 .sub-title {
   display: block;
   font-size: 14px;
@@ -1005,18 +1002,23 @@ box-shadow: 0 0 10px rgba(79,141,253,0.25);
   position: relative;
   padding: 0;
   text-align: center;
+   overflow: hidden;
 }
 
 /* الصورة */
-#modal-img {
+#modal-img{
   width: 100%;
-  height: 260px;
+  height: 320px;
   object-fit: contain;
-  background: #f8fafc;
-  padding: 15px;
   display: block;
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 20px;
+  overflow: hidden;
 }
-
+#modal-img img{
+  max-width: 100%;
+}
 /* المحتوى */
 .modal-body {
   padding: 20px;
@@ -2202,3 +2204,11 @@ box-shadow:
     height: 55px;
     font-size: 17px;
   }
+/* ================= modal img ================= */
+  #modal-img{
+    height: 220px;
+    padding: 12px;
+    object-fit: contain;
+  }
+
+
