@@ -459,7 +459,7 @@ background-clip: text; /* 🔥 أضف هيدا */
 }
 .salse-cards{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0,1fr));
   gap: 16px;
   align-items: stretch;
 }
@@ -472,22 +472,22 @@ background-clip: text; /* 🔥 أضف هيدا */
 /*============================================================================================*/
 .card{
   background: #fff;
-  border-radius: 20px;
+  border-radius: 22px;
   overflow: hidden;
   border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: 0.3s;
+
   display: flex;
   flex-direction: column;
+
   height: 100%;
 }
 
 /* الصورة */
 .thumb_buy{
   width: 100%;
-  height: 180px;
+  aspect-ratio: 1/1;
 
-  object-fit: cover;
+  object-fit: contain;
 
   background: #fff;
 
@@ -495,7 +495,6 @@ background-clip: text; /* 🔥 أضف هيدا */
 
   display: block;
 }
-
 /* المحتوى */
 .card-info-buy{
   padding: 14px;
@@ -518,6 +517,7 @@ background-clip: text; /* 🔥 أضف هيدا */
   line-height: 1.4;
   color: #111827;
   margin: 0 0 10px;
+  min-height: 45px;
 }
 
 /* المواصفات */
